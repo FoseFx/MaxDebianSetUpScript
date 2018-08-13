@@ -2,13 +2,13 @@
 apt-get update
 apt-get upgrade
 
-apt-get install fail2ban
-apt-get install sudo
-apt-get install vim
-apt-get install ufw
-apt-get install logwatch
-apt-get install git
-apt-get install docker
+apt-get install -y fail2ban
+apt-get install -y sudo
+apt-get install -y vim
+apt-get install -y ufw
+apt-get install -y logwatch
+apt-get install -y git
+apt-get install -y curl
 
 
 useradd max -g sudo -s /bin/bash -m
@@ -20,9 +20,8 @@ chmod 700 /home/max/.ssh
 curl  -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/authorized_keys
 cat authorized_keys >> /home/max/.ssh/authorized_keys
 
-# replace with download to github repo :D
 chmod 400 /home/deploy/.ssh/authorized_keys
-chown max:max /home/max -R
+chown max /home/max -R
 
 curl -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/sshd_config
 cat sshd_config >> /etc/ssh/sshd_config
@@ -35,6 +34,13 @@ ufw enable
 curl -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/00logwatch
 cat 00logwatch >> /etc/cron.daily/00logwatch
 
+rm authorized_keys
+rm 00logwatch
+rm sshd_config
+
+curl -sSL https://get.docker.com/ | sh
+
+sudo apt-get update && apt-get upgrade
 
 # TODO:
 # su - max
