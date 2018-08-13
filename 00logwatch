@@ -1,0 +1,1 @@
+/usr/sbin/logwatch --output mail --mailto trashmr2@gmail.com --detail high
