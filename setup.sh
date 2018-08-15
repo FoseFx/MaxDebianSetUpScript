@@ -43,5 +43,6 @@ curl -sSL https://get.docker.com/ | sh
 sudo apt-get update && apt-get upgrade
 
 # TODO:
+# passwd
 # su - max
 # passwd
