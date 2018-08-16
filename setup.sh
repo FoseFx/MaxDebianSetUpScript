@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 apt-get update
 apt-get upgrade
+apt-get dist-upgrade
 
 apt-get install -y fail2ban
 apt-get install -y sudo
@@ -9,7 +10,8 @@ apt-get install -y ufw
 apt-get install -y logwatch
 apt-get install -y git
 apt-get install -y curl
-
+apt-get install -y ca-certificates
+update-ca-certificates
 
 useradd max -g sudo -s /bin/bash -m
 
