@@ -14,6 +14,7 @@ apt-get install -y ca-certificates
 update-ca-certificates
 service apache2 stop
 apt-get install nginx
+apt-get install software-properties-common
 add-apt-repository ppa:certbot/certbot
 
 
