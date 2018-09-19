@@ -12,6 +12,7 @@ apt-get install -y git
 apt-get install -y curl
 apt-get install -y ca-certificates
 update-ca-certificates
+apt-get install nginx
 
 useradd max -g sudo -s /bin/bash -m
 
@@ -44,8 +45,8 @@ rm sshd_config
 curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
 bash nodesource_setup.sh
-sudo apt-get install nodejs
-sudo apt-get update && apt-get upgrade
+apt-get install nodejs
+apt-get update && apt-get upgrade
 
 # TODO:
 # passwd
