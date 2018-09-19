@@ -18,6 +18,7 @@ apt-get install software-properties-common
 add-apt-repository ppa:certbot/certbot
 apt-get update
 apt-get install python-certbot-nginx
+apt-get install lib32stdc++6
 
 
 useradd max -g sudo -s /bin/bash -m
