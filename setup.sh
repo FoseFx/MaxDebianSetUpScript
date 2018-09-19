@@ -32,6 +32,8 @@ cat sshd_config >> /etc/ssh/sshd_config
 systemctl restart ssh
 
 ufw allow 22
+ufw allow 80
+ufw allow 442
 ufw enable
 
 curl -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/00logwatch
