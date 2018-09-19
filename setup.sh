@@ -40,8 +40,11 @@ rm authorized_keys
 rm 00logwatch
 rm sshd_config
 
-curl -sSL https://get.docker.com/ | sh
-
+# curl -sSL https://get.docker.com/ | sh
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+chmod +x nodesource_setup.sh
+bash nodesource_setup.sh
+sudo apt-get install nodejs
 sudo apt-get update && apt-get upgrade
 
 # TODO:
