@@ -12,7 +12,10 @@ apt-get install -y git
 apt-get install -y curl
 apt-get install -y ca-certificates
 update-ca-certificates
+service apache2 stop
 apt-get install nginx
+add-apt-repository ppa:certbot/certbot
+
 
 useradd max -g sudo -s /bin/bash -m
 
