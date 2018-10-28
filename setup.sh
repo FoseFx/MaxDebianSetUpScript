@@ -30,7 +30,7 @@ chmod 700 /home/max/.ssh
 curl  -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/authorized_keys
 cat authorized_keys >> /home/max/.ssh/authorized_keys
 
-chmod 400 /home/deploy/.ssh/authorized_keys
+chmod 400 /home/max/.ssh/authorized_keys
 chown max /home/max -R
 
 curl -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/sshd_config
@@ -40,7 +40,7 @@ systemctl restart ssh
 
 ufw allow 22
 ufw allow 80
-ufw allow 442
+ufw allow 443
 ufw enable
 
 curl -O -L https://raw.githubusercontent.com/FoseFx/MaxDebianSetUpScript/master/00logwatch
